@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h1 class="header">Hello world</h1>
+    <h1 class="header">Hello world 11</h1>
   </section>
 </template>
 
@@ -12,7 +12,6 @@ import {
 import { State } from "vuex-class"
 
 @Component({
-  // @ts-ignore
   head() {
     return {
       title: 'ZKR'
@@ -20,7 +19,7 @@ import { State } from "vuex-class"
   }
 })
 export default class extends Vue {
-  @State items
+  @State items: any
 }
 </script>
 <style scoped lang="sass">

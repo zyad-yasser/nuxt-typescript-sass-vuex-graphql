@@ -3,13 +3,13 @@ export const state = () => ({
 });
 
 export const mutations = {
-  setItems (state, items) {
+  setItems (state: any, items: any) {
     state.items = [1, 2, 3];
   },
 };
 
 export const actions = {
-  async nuxtServerInit ({ commit }, { app }) {
+  async nuxtServerInit ({ commit }: any, { app }: any) {
     commit('setItems');
   },
 };

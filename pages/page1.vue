@@ -19,9 +19,12 @@ import { State } from "vuex-class"
 @Component({
   // @ts-ignore
   layout: 'main',
+  mounted() {
+    // console.log(this.items)
+  }
 })
 export default class extends Vue {
-  @State items
+  @State public items: any;
 }
 </script>
 <style scoped lang="sass">
