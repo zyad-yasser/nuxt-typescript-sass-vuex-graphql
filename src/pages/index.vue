@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h1 class="header">Hello world 11</h1>
+    <h1 class="header">Hello world automated</h1>
   </section>
 </template>
 

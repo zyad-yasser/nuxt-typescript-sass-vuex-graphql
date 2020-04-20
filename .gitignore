@@ -93,3 +93,4 @@ sw.*
 public/*
 functions/node_modules
 functions/.nuxt
+.firebase

@@ -4,6 +4,7 @@ export const state = () => ({
 
 export const mutations = {
   setItems (state: any, items: any) {
+    // console.log(this)
     state.items = [1, 2, 3];
   },
 };

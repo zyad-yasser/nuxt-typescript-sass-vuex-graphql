@@ -1,9 +1,8 @@
+const config = require('./environment');
 
 module.exports = {
+  srcDir: 'src',
   mode: 'universal',
-  /*
-  ** Headers of the page
-  */
   head: {
     title: process.env.npm_package_name || '',
     meta: [
@@ -15,52 +14,30 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
-  /*
-  ** Customize the progress-bar color
-  */
   loading: { color: '#fff' },
-  /*
-  ** Global CSS
-  */
-  css: [
-  ],
-  /*
-  ** Plugins to load before mounting the App
-  */
   plugins: [
+    '~/plugins/axios'
   ],
-  /*
-  ** Nuxt.js dev-modules
-  */
   buildModules: [
     '@nuxt/typescript-build'
   ],
-  /*
-  ** Nuxt.js modules
-  */
   modules: [
-    // Doc: https://buefy.github.io/#/documentation
+    'nuxt-graphql-request',
     'nuxt-buefy',
-    // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa'
   ],
-  /*
-  ** Axios module configuration
-  ** See https://axios.nuxtjs.org/options
-  */
   axios: {
   },
-  /*
-  ** Build configuration
-  */
   css: [ '~/assets/sass/styles.sass' ],
   build: {
     extractCSS: true,
-    /*
-    ** You can extend webpack config here
-    */
     extend (config, ctx) {
     }
-  }
+  },
+  graphql: {
+    endpoint: `${config.baseUrl}/graphql`,
+    AST: false,
+    options: {},
+  },
 }
